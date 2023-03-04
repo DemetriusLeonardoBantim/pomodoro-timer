@@ -1,9 +1,11 @@
+import {Button} from './Components/Button'
+
 
 export function App() {
 
   return (
     <div className="App">
-      <h1>Oi</h1>
+      <Button variant='primary'/>
     </div>
   )
 }
