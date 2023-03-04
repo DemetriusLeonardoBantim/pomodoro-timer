@@ -5,15 +5,13 @@ import { GlobalStyle } from './styles/global'
 import { Button } from './Components/Button'
 
 export function App() {
-
   return (
     <ThemeProvider theme={defaultTheme}>
+      <Button variant="primary" />
+      <Button variant="secondary" />
+      <Button variant="success" />
 
-      <Button variant='primary'/>
-      <Button variant='secondary'/>
-      <Button variant='success'/>
-
-      <GlobalStyle/>
+      <GlobalStyle />
     </ThemeProvider>
   )
 }
