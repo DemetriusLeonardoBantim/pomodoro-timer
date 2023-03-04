@@ -1,11 +1,19 @@
-import {Button} from './Components/Button'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
 
+import { Button } from './Components/Button'
 
 export function App() {
 
   return (
-    <div className="App">
+    <ThemeProvider theme={defaultTheme}>
+
       <Button variant='primary'/>
-    </div>
+      <Button variant='secondary'/>
+      <Button variant='success'/>
+
+      <GlobalStyle/>
+    </ThemeProvider>
   )
 }
