@@ -20,12 +20,18 @@ const newCicleFormValidationSchema = zod.object({
     .max(60, 'Informe um valor menor ou igual a 60.'),
 })
 
+type NewCycleFormData = zod.infer<typeof newCicleFormValidationSchema>
+
 export function Home() {
   const { register, handleSubmit, watch } = useForm({
     resolver: zodResolver(newCicleFormValidationSchema),
+    defaultValues: {
+      task: '',
+      minutesAmount: 0,
+    },
   })
 
-  function handleCreateNewCycle(data: any) {
+  function handleCreateNewCycle(data: NewCycleFormData) {
     console.log(data)
   }
 
